@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg" href="Mochajava-Image/favicon.svg">
+    <script src="script.js" defer></script>
+    <script>
+  (function(d) {
+    var config = {
+      kitId: 'kzu3fve',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+                auto: true,
+                pause: 5000,
+            });
+        });
+</script>
+
+    <title>Mochajava Burgershop</title>
+</head>
+<body>
+    <!--ローディング画面-->
+    <div id="loading">
+        <div id="loader">Loading...</div>
+    </div>
+    <header>
+        <img src="Mochajava-Image/logo.svg" alt="Logo" class="header-logo">
+        <img src="Mochajava-Image/Shopname.svg" alt="Shopname" class="header-shopname">
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="https://www.instagram.com/_mochajava/">Instagram</a></li>
+        </ul>
+        <input type="checkbox" id="overlay-input">
+        <label for="overlay-input" id="overlay-button">
+            <span></span>
+        </label>
+        <div id="overlay">
+            <ul>
+                <li><a href="#home" class="list">Home</a></li>
+                <li><a href="#menu" class="list">Menu</a></li>
+                <li><a href="#about" class="list">About</a></li>
+                <li><a href="#shop" class="list">Shop</a></li>
+                <li><a href="https://www.instagram.com/_mochajava/" class="list">Instagram</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <main id="home">
+            <img src="Mochajava-Image/Shopname-Main.svg" alt="Main-Shopname" class="main-shopname">
+            <img src="Mochajava-Image/Picture-1.jpg" alt="Hamburger" class="picture_1">
+        </main>
+        <section class="menu" id="menu">
+            <h1>Menu</h1>
+                <h2>Hamburger</h2>
+                <div class="hamburger">
+                    <h3 class="original-text">Original</h3>
+                    <img src="Mochajava-Image/Humburger-1.jpg" alt="Hamburger" class="burger_1 fadein">
+                    <h3 class="teriyaki-text">Teriyaki</h3>
+                    <img src="Mochajava-Image/Humburger-2.jpg" alt="Hamburger" class="burger_2 fadein">
+                </div>
+            <div class="wrapper">
+                <div class="topping-wrapper">
+                    <h2 class="topping-text">Topping</h2>
+                    <div class="topping">
+                        <h3 class="avocado-text">Avocado</h3>
+                        <img src="Mochajava-Image/Topping-7.jpg" alt="Avocado" class="avocado fadein">
+                        <h3 class="cheese-text">Cheese</h3>
+                        <img src="Mochajava-Image/Topping-5.jpg" alt="Cheese" class="cheese fadein">
+                        <h3 class="bacon-text">Bacon</h3>
+                        <img src="Mochajava-Image/Topping-4.jpg" alt="Bacon" class="bacon fadein">
+                    </div>
+                </div>
+                <div class="side-wrapper">
+                    <h2 class="side-text">Side</h2>
+                    <div class="side">
+                        <h3 class="potato-text">Potato</h3>
+                        <img src="Mochajava-Image/Side-1.jpg" alt="Potato" class="potato fadein">
+                        <img src="Mochajava-Image/Side-1-SP.png" alt="Potato" class="potato-sp fadein">
+                        <h3 class="coke-text">Coke</h3>
+                        <img src="Mochajava-Image/Side-2.jpg" alt="Coke" class="coke fadein">
+                        <img src="Mochajava-Image/Side-2-SP.png" alt="Coke" class="coke-sp fadein">
+                        <h3 class="ginger-ale-text">Ginger Ale</h3>
+                        <img src="Mochajava-Image/Side-3.jpg" alt="GingerAle" class="ginger-ale fadein">
+                        <img src="Mochajava-Image/Side-3-SP.png" alt="GingerAle" class="ginger-ale-sp fadein">
+                        <h3 class="oolong-tea-text">Oolong Tea</h3>
+                        <img src="Mochajava-Image/Side-4.jpg" alt="OolongTea" class="oolong-tea fadein">
+                        <img src="Mochajava-Image/Side-4-SP.png" alt="OolongTea" class="oolong-tea-sp fadein">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h1>About</h1>
+            <div class="slider-wrapper">
+                <div class="slider aboutpictures">
+                    <img src="Mochajava-Image/About-1.jpg" width=auto height=auto alt="About">
+                    <img src="Mochajava-Image/About-2.jpg" width=auto height=auto alt="About">
+                    <img src="Mochajava-Image/About-3.jpg" width=auto height=auto alt="About">
+                    <img src="Mochajava-Image/About-4.jpg" width=auto height=auto alt="About">
+                </div>
+            </div>
+            <div class="about-text fadein">
+                <p>Mochajava Burgershop（モカジャババーガーショップ）は2021年2月にバイカーズウェアショップ Work Peoples Inn（ワークピープルズイン）に併設する小さなハンバーガショップとしてオープンしました。</p>
+                <p>バイカーズ、ワークウェア、アメカジ好きにはたまらないヴィンテージ感溢れる外観と、ちょっとコワモテだけどとっても気さくなお兄さんが特徴。</p>
+                <p>注文を受けてからバンズとパテを焼き上げるため、いつでもできたてホヤホヤ、アツアツのハンバーガーを食べられますよ。</p>
+                <p>ツーリング帰りやショッピングついでに、美味しいハンバーガーが食べたくなったら是非お立ち寄り下さい。</p>
+            </div>
+        </section>
+        <section class="shop" id="shop">
+            <h1>Shop</h1>
+            <div class="shop-address">
+                <p class="shop-address-text">SHOP ADDRESS</p>
+                <p class="shop-address-text-2">
+                    福岡県福岡市博多区<br>
+                    神屋町10-18<br>
+                    〒812-0022<br>
+                </p>
+                <p class="opening-ours-text">OPENING OURS</p>
+                <p class="opening-ours-text-2">11:30 〜 無くなり次第終了</p>
+            </div>
+            <!--GoogleMapを表示-->
+            <div class="map">
+                <iframe class="fadein" src="https://www.google.com/maps/d/embed?mid=1RDAGe3QFZUZZSy5s4QjHp0TtUY6zCN8&ehbc=2E312F" width="400" height="400"></iframe>
+            </div>
+            <footer>
+                <img src="Mochajava-Image/logo.svg" alt="logo" class="footer-logo">
+            </footer>
+        </section>
+    </div>
+</body>
+</html>
