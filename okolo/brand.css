@@ -1,0 +1,276 @@
+@charset 'UTF-8';
+
+/*Asset Color*/
+:root{
+    width: 100vw;
+    height: 100vh;
+    --black: #000;
+    --white: #FFF;
+    --gray-1: #707070;
+    --gray-2: #c6c6c6;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+/*header logo*/
+.logo img{
+    width: 45vw;
+    height: 10vh;
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    opacity: 0;
+    animation-name: text-animation;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+
+/*
+SLIDE MENU
+================================================ */
+/* 開閉ボタン */
+.btn-menu {
+    position: fixed;
+    right: 1.5rem;
+    top: 0.5rem;
+    z-index: 999;
+    height: 4rem;
+    width: 4rem;
+    transition: .4s;
+    background-color: transparent;
+    opacity: 0;
+    animation-name: text-animation;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+.btn-menu svg {
+    fill: var(--white);
+    height: 5rem;
+    width: 4rem;
+}
+
+/* 閉じるボタン */
+#menu-close svg {
+    fill: var(--black);
+}
+
+/* スライドメニューパネル */
+#menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    padding: 8rem 2rem 2rem;
+    width: max(32vw, 20rem);
+    height: 100vh;
+    background-color: var(--white);
+    box-shadow: 0 0 2rem var(--black);
+    translate: 100vw;
+}
+.menu-list {
+    list-style: none;
+}
+.menu-list li {
+    margin: 1.5rem 0;
+    font-family: 'DIN condensed';
+    font-size: 35px;
+    font-weight: bold;
+    opacity: 0;
+}
+.menu-list a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+main{
+    position: relative;
+    z-index: 998;
+}
+
+/*ブランド*/
+.brand-image-1,.brand-image-2,.brand-image-3,.brand-image-4{
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+    text-align: center;
+    box-shadow: 1px 1px 5px var(--black);
+    opacity: 0;
+    animation-name: text-animation;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+
+.brand-image-1{
+    background-image: url(okolo-image/randy-image-SP-6.jpg);
+    background-position: center;
+    background-size: 300px 300px;
+    margin-top: 100px;
+
+}
+
+.brand-image-2{
+    background-image: url(okolo-image/saby-image-SP-3.jpg);
+    background-position: center;
+    background-size: 300px 300px;
+
+}
+
+.brand-image-3{
+    background-image: url(okolo-image/kimmy-image-SP-6.jpg);
+    background-position: center;
+    background-size: 300px 350px;
+
+}
+
+.brand-image-4{
+    background-image: url(okolo-image/twelve-image-SP-5.jpg);
+    background-position: center;
+    background-size: 300px 300px;
+
+}
+
+main button{
+    font-family: 'Alternate Gothic No3 D';
+    font-size: 40px;
+    font-weight: normal;
+    background-color: transparent;
+    opacity: .9;
+    margin-top: 120px;
+    padding: 8px 10px 0px 10px;
+}
+
+main button a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+/*背景画像スライドショー*/
+/* スライダー全体 */
+.slider{
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+}
+
+  /* スライダー画像 */
+.slider .image{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*①スライド画像表示する画像を定義*/
+.slider .image:nth-of-type(1){
+    background-image: url(okolo-image/top-image-SP-3.jpg);
+}
+.slider .image:nth-of-type(2){
+    animation-delay: 4s;
+    background-image: url(okolo-image/top-image-SP-2.jpg);
+}
+.slider .image:nth-of-type(3){
+    animation-delay: 8s;
+    background-image: url(okolo-image/top-image-SP-1.jpg);
+}
+.slider .image:nth-of-type(4){
+    animation-delay: 12s;
+    background-image: url(okolo-image/top-image-SP-4.jpg);
+}
+
+/*②アニメーション設定 animation-durationのみ変更*/
+.slider .image{
+    animation-name: anime;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;  /* ①で設定したanimation-delayを合計を挿入 */
+    
+}
+
+/* アニメーション定義 */
+@keyframes anime {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.18);
+    }
+}
+
+@keyframes text-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+footer{
+    width: 100vw;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 998;
+    color: var(--gray-2);
+}
+
+@media (min-width: 600px){
+    .logo img{
+        width: auto;
+        height: 15vh;
+        position: fixed;
+        top: 2px;
+        z-index: 999;
+    }
+
+    main button{
+        font-size: 50px;
+
+    }
+
+    .slider .image:nth-of-type(1){
+        background-image: url(okolo-image/top-image-PC-3.jpg);
+    }
+    .slider .image:nth-of-type(2){
+        animation-delay: 3s;
+        background-image: url(okolo-image/top-image-PC-2.jpg);
+    }
+    .slider .image:nth-of-type(3){
+        animation-delay: 6s;
+        background-image: url(okolo-image/top-image-PC-1.jpg);
+    }
+    .slider .image:nth-of-type(4){
+        animation-delay: 9s;
+        background-image: url(okolo-image/top-image-PC-4.jpg);
+    }
+
+
+
+}

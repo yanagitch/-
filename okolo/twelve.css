@@ -1,0 +1,314 @@
+@charset 'UTF-8';
+
+/*Asset Color*/
+:root{
+    width: 100vw;
+    height: 100vh;
+    --black: #000;
+    --white: #FFF;
+    --gray-1: #707070;
+    --gray-2: #c6c6c6;
+
+}
+
+/*header logo*/
+.logo img{
+    width: 45vw;
+    height: 10vh;
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    opacity: 0;
+    animation-name: text-animation;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+
+/*
+SLIDE MENU
+================================================ */
+/* 開閉ボタン */
+.btn-menu {
+    position: fixed;
+    right: 1.5rem;
+    top: 0.5rem;
+    z-index: 999;
+    height: 4rem;
+    width: 4rem;
+    transition: .4s;
+    background-color: transparent;
+    opacity: 0;
+    animation-name: text-animation;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+.btn-menu svg {
+    fill: var(--black);
+    height: 5rem;
+    width: 4rem;
+}
+
+/* 閉じるボタン */
+
+#menu-close svg {
+    fill: var(--black);
+}
+
+/* スライドメニューパネル */
+#menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    padding: 8rem 2rem 2rem;
+    width: max(32vw, 20rem);
+    height: 100vh;
+    background-color: var(--white);
+    box-shadow: 0 0 2rem var(--black);
+    translate: 100vw;
+}
+.menu-list {
+    list-style: none;
+}
+.menu-list li {
+    margin: 1.5rem 0;
+    font-family: 'DIN condensed';
+    font-size: 35px;
+    font-weight: bold;
+    opacity: 0;
+}
+.menu-list a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/*背景画像スライドショー*/
+/* スライダー全体 */
+
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+  /* スライダー画像 */
+.slider .image{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*①スライド画像表示する画像を定義*/
+.slider .image:nth-of-type(1){
+    background-image: url(okolo-image/twelve-image-SP-1.jpg);
+}
+.slider .image:nth-of-type(2){
+    animation-delay: 5s;
+    background-image: url(okolo-image/twelve-image-SP-2.jpg);
+}
+.slider .image:nth-of-type(3){
+    animation-delay: 10s;
+    background-image: url(okolo-image/twelve-image-SP-3.jpg);
+}
+.slider .image:nth-of-type(4){
+    animation-delay: 15s;
+    background-image: url(okolo-image/twelve-image-SP-4.jpg);
+}
+.slider .image:nth-of-type(5){
+    animation-delay: 20s;
+    background-image: url(okolo-image/twelve-image-SP-5.jpg);
+}
+.slider .image:nth-of-type(6){
+    animation-delay: 25s;
+    background-image: url(okolo-image/twelve-image-SP-6.jpg);
+}
+
+/*②アニメーション設定 animation-durationのみ変更*/
+.slider .image{
+    animation-name: anime;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+
+/* アニメーション定義 */
+@keyframes anime {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes text-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*テキスト*/
+h1{
+    display: block;
+    position: relative;
+    z-index: 4;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Alternate Gothic No3 D';
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--white);
+    margin-top: 17vh;
+    opacity: 0;
+    animation-name: text-animation;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+
+.twelve-text{
+    width: 100vw;
+    position: absolute;
+    z-index: 4;
+    font-family: '源ノ角ゴシック Code JP';
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.9;
+    color: var(--white);
+    margin-top: 3vh;
+    padding: 2vh;
+    opacity: 0;
+    animation-name: text-animation;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+
+span{
+    color: var(--black);
+    text-shadow: 2px 0px 0px var(--white);
+}
+
+.next-button{
+    position: relative;
+    z-index: 998;
+    top: 50vh;
+}
+
+.left{
+    width: 10vw;
+    height: 10vh;
+    margin-left: 5vw;
+    opacity: 0;
+    animation-name: text-animation;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+
+.right{
+    width: 10vw;
+    height: 10vh;
+    margin-left: 65vw;
+    opacity: 0;
+    animation-name: text-animation;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+
+
+footer{
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+    color: var(--gray-2);
+}
+
+
+@media (min-width: 600px){
+    .logo img{
+        width: auto;
+        height: 15vh;
+        position: fixed;
+        top: 2px;
+        z-index: 999;
+    }
+
+    .slider .image:nth-of-type(1){
+        background-image: url(okolo-image/twelve-image-PC-1.jpg);
+    }
+    .slider .image:nth-of-type(2){
+        animation-delay: 3s;
+        background-image: url(okolo-image/twelve-image-PC-2.jpg);
+    }
+    .slider .image:nth-of-type(3){
+        animation-delay: 6s;
+        background-image: url(okolo-image/twelve-image-PC-3.jpg);
+    }
+    .slider .image:nth-of-type(4){
+        animation-delay: 9s;
+        background-image: url(okolo-image/twelve-image-PC-4.jpg);
+    }
+    .slider .image:nth-of-type(5){
+        animation-delay: 12s;
+        background-image: url(okolo-image/twelve-image-PC-5.jpg);
+    }
+    .slider .image:nth-of-type(6){
+        animation-delay: 15s;
+        background-image: url(okolo-image/twelve-image-PC-6.jpg);
+    }
+
+    h1{
+        margin-top: 25vh;
+    }
+
+    .randy-text{
+        line-height: 2;
+    }
+
+    .next-button{
+        top: 40vh;
+    }
+
+    .left{
+        margin-left: 15vw;
+    }
+
+    .right{
+        margin-left: 50vw;
+    }
+
+
+
+}
